@@ -10,7 +10,7 @@ class People(models.Model):
     nome = models.CharField(max_length=150)
     cpf = models.CharField(max_length=14)
     rg = models.CharField(max_length=15)
-    data_nasc = models.DateTimeField()
+    data_nasc = models.DateField()
     sexo = models.CharField(max_length=10, choices=GENDER_CHOICES)
     mae = models.CharField(max_length=150)
     pai = models.CharField(max_length=150)
