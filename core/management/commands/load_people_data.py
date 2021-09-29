@@ -8,4 +8,4 @@ class Command(BaseCommand):
     help = 'Load people data from CSV file'
 
     def handle(self, *args, **kwargs):
-        pass
+        print("Ola mundo!")
