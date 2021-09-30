@@ -1,5 +1,16 @@
 from django.db import models
 
+
+class PeopleManager(models.Manager):
+
+    def first_five_people(self):
+        return self.model.objects.order_by('nome')[:5]
+
+    def starts_with(self, text):
+        return self.model.objects.filter(nome__istartswith=text)
+
+
+
 class People(models.Model):
 
     GENDER_CHOICES = [
@@ -18,6 +29,8 @@ class People(models.Model):
     altura = models.DecimalField(max_digits=3, decimal_places=2)
     peso = models.PositiveIntegerField()
     tipo_sanguineo = models.CharField(max_length=4)
+
+    objects = PeopleManager()
 
 
     @property

@@ -9,13 +9,6 @@ class Command(BaseCommand):
     help = 'Load people data from CSV file'
 
     def handle(self, *args, **kwargs):
-
-        """
-        >>> objs = Entry.objects.bulk_create([
-...     Entry(headline='This is a test'),
-...     Entry(headline='This is only a test'),
-... ])
-        """
         if People.objects.exists():
             print("A tabela de pessoas já foi populada. Nada a fazer.")
         else:
