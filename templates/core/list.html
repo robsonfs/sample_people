@@ -1,0 +1,10 @@
+<h1>Lista de Pessoas</h1>
+
+
+{% for p in pessoas %}
+  <p>
+    <b>Nome:</b> {{ p.nome }}
+    <b>Data Nascimento:</b> {{ p.data_nasc }}
+    <hr>
+  </p>
+{% endfor %}

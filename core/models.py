@@ -10,7 +10,6 @@ class PeopleManager(models.Manager):
         return self.model.objects.filter(nome__istartswith=text)
 
 
-
 class People(models.Model):
 
     GENDER_CHOICES = [
@@ -31,7 +30,6 @@ class People(models.Model):
     tipo_sanguineo = models.CharField(max_length=4)
 
     objects = PeopleManager()
-
 
     @property
     def idade(self):
