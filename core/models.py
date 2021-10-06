@@ -28,6 +28,11 @@ class People(models.Model):
     altura = models.DecimalField(max_digits=3, decimal_places=2)
     peso = models.PositiveIntegerField()
     tipo_sanguineo = models.CharField(max_length=10)
+    endereco = models.CharField(max_length=10, null=True)
+    cidade = models.CharField(max_length=10, null=True)
+    estado = models.CharField(max_length=10, null=True)
+    cep = models.CharField(max_length=10, null=True)
+    pais = models.CharField(max_length=10, null=True)
     """
     1. Permitir entrada de dados nulo
     2. Gerar uma migração vazia, e escrever a lógica para popular essa coluna

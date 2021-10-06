@@ -13,6 +13,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='people',
             name='sexo',
-            field=models.CharField(choices=[('F', 'Feminino'), ('M', 'Masculino')], max_length=10),
+            field=models.CharField(
+                choices=[('F', 'Feminino'), ('M', 'Masculino')], max_length=10),
         ),
     ]
