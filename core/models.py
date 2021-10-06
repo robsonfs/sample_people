@@ -21,13 +21,19 @@ class People(models.Model):
     cpf = models.CharField(max_length=14)
     rg = models.CharField(max_length=15)
     data_nasc = models.DateField()
-    sexo = models.CharField(max_length=10, choices=GENDER_CHOICES)
+    sexo = models.CharField(max_length=1, choices=GENDER_CHOICES)
     mae = models.CharField(max_length=150)
     pai = models.CharField(max_length=150)
     celular = models.CharField(max_length=150)
     altura = models.DecimalField(max_digits=3, decimal_places=2)
     peso = models.PositiveIntegerField()
-    tipo_sanguineo = models.CharField(max_length=4)
+    tipo_sanguineo = models.CharField(max_length=10)
+    """
+    1. Permitir entrada de dados nulo
+    2. Gerar uma migração vazia, e escrever a lógica para popular essa coluna
+        nos registros existentes.
+    3. Forçar que um valor seja informado para o campo recém criado.
+    """
 
     objects = PeopleManager()
 

@@ -11,7 +11,7 @@ def people_list(request):
     context = {
         "pessoas": pessoas
     }
-    return render(request, 'core/list.html', context=context)
+    return render(request, 'core/list2.html', context=context)
 
 
 def people_create(request):
